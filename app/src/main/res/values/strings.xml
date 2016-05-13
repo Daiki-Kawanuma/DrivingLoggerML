@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, UI!</string>
+    <string name="app_name">Driving Logger ML</string>
+    <string name="titlePairedDevice">登録済みのペアデバイス</string>
+    <string name="selectDevice">デバイス選択</string>
+    <string name="setAutoFinishTime">自動終了の設定</string>
+    <string name="selectSensorUsability">外部センサ使用可否</string>
+    <string name="calibration">キャリブレーション</string>
+    <string name="sendLogFile">ログファイルのアップロード</string>
+    <string name="autoUpload">自動アップロード設定</string>
+    <string name="defineUserID">名前を入力する</string>
+    <string name="defineCarID">カーIDを入力する</string>
+    <string name="finish_button">入力完了</string>
+    <string name="defineUserAndCarID">各種IDの設定</string>
+    <string name="autoControlGDL">自動ロギングの設定</string>
+    <string name="userid_title">UserIDを入力してください</string>
+    <string name="carid_title">CarIDを入力してください</string>
+    <string name="startReportingBattary">バッテリー残量取得開始</string>
+    <string name="stopReportingBattary">バッテリー残量取得終了</string>
+    <string name="testPing">Pingテスト</string>
+    <string name="sensorid_title">SensorIDを入力してください</string>
+</resources>

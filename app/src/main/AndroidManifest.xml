@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.ac.ynu.tommylab.ecolog.drivingloggerml">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+    <application android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:persistent="true" android:name="DeviceInfo" android:largeHeap="true">
+        <activity android:label="@string/app_name" android:name=".drivingloggerui.DrivingLoggerUI"  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".getdrivinglog.GetDrivingLog"></service>
+        <service android:name=".uploadlog.UploadLog"></service>
+        <receiver android:name=".autocontrolgdl.AutoControlGDL">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".setuserandcarid.SetUserAndCarID"></activity>
+        <receiver android:name=".uploadlog.ReceiverToStartUploadLog"></receiver>
+        <!--receiver android:name=".uploadlog.BatteryReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED"/>
+            </intent-filter>
+        </receiver-->
+        <service android:name=".autocontrolgdl.LoggingSystemManager"></service>
+
+    </application>
+
+
+</manifest>
